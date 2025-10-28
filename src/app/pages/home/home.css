@@ -1,0 +1,7 @@
+
+
+body {
+    margin: 20px;
+    padding-top: 90px; /* misma altura que el header grande */
+    border : 2px solid #3ddc1e;
+  }

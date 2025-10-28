@@ -1,0 +1,18 @@
+.product-container {
+  margin: 20px;
+  padding-top: 90px; /* misma altura que el header grande */
+  border : 2px solid #dc1eb0;
+}
+
+
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  
+  
+
