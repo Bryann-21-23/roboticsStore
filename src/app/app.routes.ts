@@ -12,6 +12,7 @@ import { PerfilUsers } from './pages/users/perfil-users/perfil-users';
 
 export const routes: Routes = [
     {path:  '', component: Home},
+    {path: 'home', component: Home},
     {path: 'registro', component: Register},
     {path: 'catalogo', component: Catalogo},
     {path: 'blog', component: Blog},

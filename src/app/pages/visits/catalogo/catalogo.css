@@ -1,18 +1,57 @@
 .product-container {
   margin: 20px;
-  padding-top: 90px; /* misma altura que el header grande */
-  border : 2px solid #dc1eb0;
+  padding-top: 90px; /* es paara que empiese despues del head y mo lo pise */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
 }
 
-
-.example-card {
-    max-width: 400px;
+  .product-card {
+    width: 300px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
-  .example-header-image {
-    background-image: url('https://material.angular.dev/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   }
   
+  .product-card img {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
   
-
+  mat-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  mat-card-subtitle {
+    color: #333;
+    font-weight: 500;
+  }
+  
+  mat-card-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+    flex-grow: 1;
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 10px 10px;
+  }
+  
