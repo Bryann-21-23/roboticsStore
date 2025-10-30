@@ -1,3 +1,44 @@
-<p>register works!</p>
-<app-footer></app-footer>
+<app-header></app-header>
 
+<div class="page-login">
+    <h2>Registarte</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="example-container">
+      
+        <mat-form-field>
+        <mat-label >Ingresa nombre</mat-label>
+        <input matInput formControlName="nombre" />
+        <mat-error *ngIf="loginForm.get('nombre')?.invalid && loginForm.get('nombre')?.touched">
+         Tu nombre es obligatorio
+        </mat-error>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label >Ingresa tu usuario</mat-label>
+          <input matInput formControlName="user" />
+          <mat-error *ngIf="loginForm.get('user')?.invalid && loginForm.get('user')?.touched">
+            El usuario es obligatorio
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Ingresa tu contraseña</mat-label>
+            <input matInput      formControlName="password" [type]="hide() ? 'password' : 'text'" />
+            <button
+              matIconButton
+              matSuffix
+              (click)="clickEvent($event)"
+              [attr.aria-label]="'Hide contrasena'"
+              [attr.aria-pressed]="hide()"
+            >
+              <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+
+        </mat-form-field>
+
+        <button mat-flat-button color="primary" type="submit">Registrarse</button>
+
+      
+    </form>
+    
+
+<app-footer class="footer"></app-footer>

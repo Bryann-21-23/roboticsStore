@@ -8,7 +8,7 @@ import { Nosotros } from './pages/visits/nosotros/nosotros';
 import { CatalogoUsers } from './pages/users/catalogo-users/catalogo-users';
 import { CarritoCompras } from './pages/users/carrito-compras/carrito-compras';
 import { PerfilUsers } from './pages/users/perfil-users/perfil-users';
-
+import { HomeUsers } from './pages/users/home-users/home-users';
 
 export const routes: Routes = [
     {path:  '', component: Home},
@@ -21,4 +21,5 @@ export const routes: Routes = [
     {path: 'catalogoUsers', component: CatalogoUsers},
     {path: 'carrito', component: CarritoCompras},
     {path: 'perfil', component: PerfilUsers},
+    {path: 'homeUsers', component: HomeUsers},
 ]

@@ -1,6 +1,5 @@
 <app-header></app-header>
 
-<body>
 <div class="page-login">
     <h2>Iniciar Sesión</h2>
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="example-container">
@@ -12,13 +11,13 @@
     </mat-error>
   </mat-form-field>
 
-  
-    <mat-form-field>
+  <mat-form-field>
       <mat-label>Ingresa tu contraseña</mat-label>
       <input matInput      formControlName="password" [type]="hide() ? 'password' : 'text'" />
       <button
         matIconButton
         matSuffix
+        type="button"
         (click)="clickEvent($event)"
         [attr.aria-label]="'Hide contrasena'"
         [attr.aria-pressed]="hide()"
@@ -26,16 +25,19 @@
         <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
 
-    </mat-form-field>
-    <button matButton="filled" (click)="showData = true">Ingresar</button>
+  </mat-form-field>
+
+ 
+  <button mat-flat-button color="primary" type="submit">Ingresar</button>
+  
   </form>
-    @if (showData){
-      <div  class="mt-4">
-          <h3>Datos ingresados:</h3>
-          <p><strong>Usuario:</strong> {{ loginData.user }}</p>
-          <p><strong>Contraseña:</strong> {{ loginData.password }}</p>
-     </div>}
+    
+  <p class="error" *ngIf="mensajeError">{{ mensajeError }}</p>
+
+ 
+
 </div>
 
-</body>
-<app-footer></app-footer>
+
+
+<app-footer class="footer"></app-footer>

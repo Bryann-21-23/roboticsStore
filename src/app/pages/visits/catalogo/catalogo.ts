@@ -8,8 +8,6 @@ import {Producto} from '../../../core/producto';
 import {Datos} from '../../../core/datos';
 
 
-
-
 @Component({
   selector: 'app-catalogo',
   imports: [Header, Footer,MatCardModule, MatButtonModule],
